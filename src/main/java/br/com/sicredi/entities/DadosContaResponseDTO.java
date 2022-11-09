@@ -11,4 +11,11 @@ public class DadosContaResponseDTO {
 	private String status;
 	private boolean enviado;
 
+	public DadosContaResponseDTO(String agencia, String conta, Double saldo, String status, boolean enviado) {
+		this.agencia = agencia;
+		this.conta = conta;
+		this.saldo = saldo;
+		this.status = status;
+		this.enviado = enviado;
+	}
 }
