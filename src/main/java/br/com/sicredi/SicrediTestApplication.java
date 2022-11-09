@@ -64,7 +64,7 @@ public class SicrediTestApplication {
 		writer.close();
 		
 		contasRecebidasDoBanco.forEach(c -> System.out.println(c));
-		System.out.println("Processamento concluído.");
+		System.out.println("Processamento concluido.");
 	}
 
 }
