@@ -27,12 +27,13 @@ public class SicrediTestApplication {
 
 	public static void main(String[] args) throws RuntimeException, InterruptedException, IOException, CsvDataTypeMismatchException, CsvRequiredFieldEmptyException {
 		SpringApplication.run(SicrediTestApplication.class, args);
+		String caminho = ("./sicredi.csv");
 		
 		ReceitaService rs = new ReceitaService();
 		
-		System.out.println("Parametro recebido: " +args[0]);
+		System.out.println("Parametro recebido: " +caminho);
 		
-		Reader reader = Files.newBufferedReader(Paths.get(args[0]));
+		Reader reader = Files.newBufferedReader(Paths.get(caminho));
 		
 		CsvToBean<DadosContaRequestDTO> csvToBean = new CsvToBeanBuilder<DadosContaRequestDTO>(reader).withType(DadosContaRequestDTO.class).build();
 		
